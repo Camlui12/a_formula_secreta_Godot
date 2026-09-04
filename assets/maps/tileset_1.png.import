@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b21e2ypyfa782"
-path="res://.godot/imported/curtains.png-8a3fb7facc3cce2b299d1b42ed6d4afd.ctex"
+uid="uid://cju18krn2aanl"
+path="res://.godot/imported/tileset_1.png-6b844ae5a0ebc9c481584bcad2f41057.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/curtains.png"
-dest_files=["res://.godot/imported/curtains.png-8a3fb7facc3cce2b299d1b42ed6d4afd.ctex"]
+source_file="res://assets/maps/tileset_1.png"
+dest_files=["res://.godot/imported/tileset_1.png-6b844ae5a0ebc9c481584bcad2f41057.ctex"]
 
 [params]
 

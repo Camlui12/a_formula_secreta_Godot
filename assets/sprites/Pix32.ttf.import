@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bou77teobuvvx"
-path="res://.godot/imported/Pix32.ttf-88978be32d44380c9a2c77c0f24e7c46.fontdata"
+path="res://.godot/imported/Pix32.ttf-f09a08343ed64aa2097e1df188172b2e.fontdata"
 
 [deps]
 
-source_file="res://assets/Pix32.ttf"
-dest_files=["res://.godot/imported/Pix32.ttf-88978be32d44380c9a2c77c0f24e7c46.fontdata"]
+source_file="res://assets/sprites/Pix32.ttf"
+dest_files=["res://.godot/imported/Pix32.ttf-f09a08343ed64aa2097e1df188172b2e.fontdata"]
 
 [params]
 

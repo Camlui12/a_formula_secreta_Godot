@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dt261usic3f1q"]
+
+[ext_resource type="Texture2D" uid="uid://b1fvwo3ip48tg" path="res://assets/sprites/fire_anim.png" id="1_5bena"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmjtm"]
+atlas = ExtResource("1_5bena")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnman"]
+atlas = ExtResource("1_5bena")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_onrkg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmjtm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnman")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fire" type="Area2D" unique_id=319697567]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=133556797]
+sprite_frames = SubResource("SpriteFrames_onrkg")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1898847042]

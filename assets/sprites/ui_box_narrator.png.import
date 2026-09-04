@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b701dmxagr8wh"
-path="res://.godot/imported/scene1bright.png-afe0a81843b85b65fe73d14e1db8b2f4.ctex"
+uid="uid://bfc45hdjhu04k"
+path="res://.godot/imported/ui_box_narrator.png-6582e157423b3e15dd29f66fcc03936f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/scene1bright.png"
-dest_files=["res://.godot/imported/scene1bright.png-afe0a81843b85b65fe73d14e1db8b2f4.ctex"]
+source_file="res://assets/sprites/ui_box_narrator.png"
+dest_files=["res://.godot/imported/ui_box_narrator.png-6582e157423b3e15dd29f66fcc03936f.ctex"]
 
 [params]
 

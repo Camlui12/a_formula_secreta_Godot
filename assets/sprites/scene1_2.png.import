@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bucf5u5h07v0y"
-path="res://.godot/imported/young_niccolo.png-b803ab315dce53eb2f7a39c139b59c7d.ctex"
+uid="uid://c8k5lcsdc7o8s"
+path="res://.godot/imported/scene1_2.png-accc33a47ad3f648f191bae785f8d49b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/young_niccolo.png"
-dest_files=["res://.godot/imported/young_niccolo.png-b803ab315dce53eb2f7a39c139b59c7d.ctex"]
+source_file="res://assets/sprites/scene1_2.png"
+dest_files=["res://.godot/imported/scene1_2.png-accc33a47ad3f648f191bae785f8d49b.ctex"]
 
 [params]
 

@@ -1,10 +1,7 @@
-[gd_scene format=3 uid="uid://cokvbr7hdpknj"]
+[gd_scene format=3 uid="uid://dfph4hbjysf3r"]
 
-[ext_resource type="Texture2D" path="res://assets/sprites/young_niccolo.png" id="1_4flbx"]
-[ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_onrkg"]
-[ext_resource type="Script" path="res://scenes/characters/States/idle_state.gd" id="3_76oj4"]
-[ext_resource type="Script" path="res://scripts/State Machine/state_machine.gd" id="3_atpat"]
-[ext_resource type="Script" path="res://scenes/characters/States/move_state.gd" id="4_dyp2m"]
+[ext_resource type="Texture2D" uid="uid://bucf5u5h07v0y" path="res://assets/sprites/young_niccolo.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://cdv25bo5glp84" path="res://scenes/characters/player.gd" id="1_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1kjt"]
 atlas = ExtResource("1_4flbx")
@@ -169,7 +166,7 @@ script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1319964094]
 sprite_frames = SubResource("SpriteFrames_onrkg")
-animation = &"walk_up"
+animation = &"idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467831820]
 position = Vector2(0, 7)
@@ -177,13 +174,3 @@ shape = SubResource("RectangleShape2D_f6jof")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1375361595]
 process_callback = 0
-
-[node name="StateMachine" type="Node" parent="." unique_id=870089260 node_paths=PackedStringArray("estado_inicial")]
-script = ExtResource("3_atpat")
-estado_inicial = NodePath("Idle")
-
-[node name="Idle" type="Node" parent="StateMachine" unique_id=1612296309]
-script = ExtResource("3_76oj4")
-
-[node name="Walk" type="Node" parent="StateMachine" unique_id=237758840]
-script = ExtResource("4_dyp2m")

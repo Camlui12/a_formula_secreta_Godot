@@ -1,27 +1,27 @@
+class_name Player
 extends CharacterBody2D
-const SPEED = 150.0
-@onready var anim = $AnimatedSprite2D
 
-var last_direction = "down"
+@export var speed = 60.0
 
-func _physics_process(_delta):
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	
-	velocity = direction * SPEED
-	move_and_slide()
-	
-	if direction != Vector2.ZERO:
-		if direction.x > 0:
-			anim.play("walk_right")
-			last_direction = "right"
-		elif direction.x < 0:
-			anim.play("walk_left")
-			last_direction = "left"
-		elif direction.y > 0:
-			anim.play("walk_down")
-			last_direction = "down"
-		elif direction.y < 0:
-			anim.play("walk_up")
-			last_direction = "up"
+var direcao_apontada: Vector2 = Vector2.DOWN
+
+func capturar_direcao_entrada() -> Vector2:
+	var direcao := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	if direcao == Vector2.ZERO:
+		return Vector2.ZERO
+	if abs(direcao.x) >= abs(direcao.y):
+		direcao = Vector2(sign(direcao.x), 0.0)
 	else:
-		anim.play("idle_" + last_direction)
+		direcao = Vector2(0.0, sign(direcao.y))
+	
+	direcao_apontada = direcao
+	return direcao
+
+
+func obter_direcao_cardinal() -> String:
+	match direcao_apontada:
+		Vector2.UP: return "up"
+		Vector2.DOWN: return "down"
+		Vector2.LEFT: return "left"
+		Vector2.RIGHT: return "right"
+		_: return "down"

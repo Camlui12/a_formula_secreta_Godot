@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://dpsegn8hc5s25" path="res://assets/sprites/glow.png" id="6_wby50"]
 [ext_resource type="Texture2D" uid="uid://bucf5u5h07v0y" path="res://assets/sprites/young_niccolo.png" id="7_xsd0a"]
 [ext_resource type="Texture2D" uid="uid://dpplgg2j33can" path="res://assets/sprites/startTexts.png" id="8_smii7"]
-[ext_resource type="Texture2D" uid="uid://bfc45hdjhu04k" path="res://assets/sprites/ui_box_narrator.png" id="9_dk2oa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1kjt"]
 atlas = ExtResource("7_xsd0a")
@@ -297,35 +296,6 @@ texture = ExtResource("6_wby50")
 offset_right = 320.0
 offset_bottom = 180.0
 texture = SubResource("AtlasTexture_f6jof")
-
-[node name="uiDialog" type="CanvasLayer" parent="." unique_id=1698751301]
-
-[node name="bgDialog" type="TextureRect" parent="uiDialog" unique_id=1557245483]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -55.0
-offset_right = 150.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("9_dk2oa")
-stretch_mode = 2
-
-[node name="txtDialog" type="RichTextLabel" parent="uiDialog/bgDialog" unique_id=1557213062]
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = 3.0
-offset_top = -24.5
-offset_right = -3.0
-offset_bottom = 24.5
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="uiMenu" type="CanvasLayer" parent="." unique_id=2097663889]
 

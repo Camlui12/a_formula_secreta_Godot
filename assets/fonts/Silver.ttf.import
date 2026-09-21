@@ -2,18 +2,18 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bou77teobuvvx"
-path="res://.godot/imported/Pix32.ttf-f09a08343ed64aa2097e1df188172b2e.fontdata"
+uid="uid://ctul6kov1n72r"
+path="res://.godot/imported/Silver.ttf-821872bb71e3788f5a26fb5a32e04f06.fontdata"
 
 [deps]
 
-source_file="res://assets/sprites/Pix32.ttf"
-dest_files=["res://.godot/imported/Pix32.ttf-f09a08343ed64aa2097e1df188172b2e.fontdata"]
+source_file="res://assets/fonts/Silver.ttf"
+dest_files=["res://.godot/imported/Silver.ttf-821872bb71e3788f5a26fb5a32e04f06.fontdata"]
 
 [params]
 
 Rendering=null
-antialiasing=1
+antialiasing=0
 generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
@@ -23,7 +23,7 @@ allow_system_fallback=true
 force_autohinter=false
 modulate_color_glyphs=false
 hinting=3
-subpixel_positioning=4
+subpixel_positioning=0
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null

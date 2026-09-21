@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://7moeadfjjlhw"]
+
+[ext_resource type="Script" uid="uid://corla3xqnkxnl" path="res://scenes/ui/dialogue_manager.gd" id="1_bni6i"]
+[ext_resource type="Texture2D" uid="uid://bfc45hdjhu04k" path="res://assets/sprites/ui_box_narrator.png" id="2_s662a"]
+[ext_resource type="FontFile" uid="uid://ctul6kov1n72r" path="res://assets/fonts/Silver.ttf" id="3_ga2qy"]
+
+[node name="DialogueManager" type="CanvasLayer" unique_id=851169630]
+script = ExtResource("1_bni6i")
+
+[node name="uiDialog" type="TextureRect" parent="." unique_id=1359803610]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -150.0
+offset_top = -55.0
+offset_right = 150.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_s662a")
+
+[node name="MarginContainer" type="MarginContainer" parent="uiDialog" unique_id=276570904]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="txtDialog" type="RichTextLabel" parent="uiDialog/MarginContainer" unique_id=1655283330]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_ga2qy")
+theme_override_font_sizes/normal_font_size = 19
+bbcode_enabled = true
+scroll_active = false

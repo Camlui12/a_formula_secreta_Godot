@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/objects/npc_fugitive.gd" id="1_npc"]
+[ext_resource type="Texture2D" path="res://assets/sprites/npc_fugitivo.png" id="2_npc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc"]
+size = Vector2(18, 12)
+
+[node name="NpcFugitive" type="CharacterBody2D"]
+collision_layer = 0
+script = ExtResource("1_npc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_npc")
+hframes = 3
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_npc")

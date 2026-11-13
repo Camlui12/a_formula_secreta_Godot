@@ -1,15 +1,172 @@
 [gd_scene format=3 uid="uid://dldjejyqitftr"]
 
 [ext_resource type="PackedScene" uid="uid://cj0717smofyv0" path="res://assets/maps/map_1.tscn" id="1_6iamk"]
+[ext_resource type="Script" uid="uid://b5y3bbep1mbew" path="res://scenes/levels/level_1.gd" id="1_x42e6"]
 [ext_resource type="PackedScene" uid="uid://dfph4hbjysf3r" path="res://scenes/characters/player.tscn" id="2_nsrm0"]
 [ext_resource type="PackedScene" uid="uid://dh70bl1n6heql" path="res://scenes/characters/guard.tscn" id="3_nsrm0"]
+[ext_resource type="PackedScene" uid="uid://p2e2qfc5uvqp" path="res://scenes/fire.tscn" id="4_fire"]
+[ext_resource type="PackedScene" path="res://scenes/objects/stone.tscn" id="5_stone"]
+[ext_resource type="PackedScene" path="res://scenes/objects/npc_fugitive.tscn" id="6_npc"]
+[ext_resource type="Script" path="res://scenes/objects/dialogue_trigger.gd" id="7_trigger"]
+
+[sub_resource type="RectangleShape2D" id="Shape_dialogo2"]
+size = Vector2(32.67, 98.67)
+
+[sub_resource type="RectangleShape2D" id="Shape_dialogo0"]
+size = Vector2(33.33, 94)
 
 [node name="Level1" type="Node2D" unique_id=1118638575]
+script = ExtResource("1_x42e6")
 
 [node name="map_1" parent="." unique_id=868675263 instance=ExtResource("1_6iamk")]
 
-[node name="Player" parent="." unique_id=1035644401 instance=ExtResource("2_nsrm0")]
-position = Vector2(176, 1038)
+[node name="Fires" type="Node2D" parent="." unique_id=900000001]
 
-[node name="Guard" parent="." unique_id=772008957 instance=ExtResource("3_nsrm0")]
-position = Vector2(260, 1023)
+[node name="Fire1" parent="Fires" unique_id=900000002 instance=ExtResource("4_fire")]
+position = Vector2(1328, 304)
+
+[node name="Fire2" parent="Fires" unique_id=900000003 instance=ExtResource("4_fire")]
+position = Vector2(1648, 592)
+
+[node name="Fire3" parent="Fires" unique_id=900000004 instance=ExtResource("4_fire")]
+position = Vector2(1008, 880)
+
+[node name="Fire4" parent="Fires" unique_id=900000005 instance=ExtResource("4_fire")]
+position = Vector2(784, 912)
+
+[node name="Fire5" parent="Fires" unique_id=900000006 instance=ExtResource("4_fire")]
+position = Vector2(208, 944)
+
+[node name="Fire6" parent="Fires" unique_id=900000007 instance=ExtResource("4_fire")]
+position = Vector2(560, 944)
+
+[node name="Fire7" parent="Fires" unique_id=900000008 instance=ExtResource("4_fire")]
+position = Vector2(1648, 1008)
+
+[node name="Fire8" parent="Fires" unique_id=900000009 instance=ExtResource("4_fire")]
+position = Vector2(1360, 1104)
+
+[node name="FireSurprise9" parent="Fires" unique_id=900000010 instance=ExtResource("4_fire")]
+position = Vector2(1776, 368)
+hidden_until_near = true
+
+[node name="FireSurprise10" parent="Fires" unique_id=900000011 instance=ExtResource("4_fire")]
+position = Vector2(1424, 432)
+hidden_until_near = true
+
+[node name="FireSurprise11" parent="Fires" unique_id=900000012 instance=ExtResource("4_fire")]
+position = Vector2(1712, 496)
+hidden_until_near = true
+
+[node name="FireSurprise12" parent="Fires" unique_id=900000013 instance=ExtResource("4_fire")]
+position = Vector2(1392, 656)
+hidden_until_near = true
+
+[node name="FireSurprise13" parent="Fires" unique_id=900000014 instance=ExtResource("4_fire")]
+position = Vector2(1264, 816)
+hidden_until_near = true
+
+[node name="FireSurprise14" parent="Fires" unique_id=900000015 instance=ExtResource("4_fire")]
+position = Vector2(1328, 848)
+hidden_until_near = true
+
+[node name="FireSurprise15" parent="Fires" unique_id=900000016 instance=ExtResource("4_fire")]
+position = Vector2(1456, 880)
+hidden_until_near = true
+
+[node name="FireSurprise16" parent="Fires" unique_id=900000017 instance=ExtResource("4_fire")]
+position = Vector2(880, 944)
+hidden_until_near = true
+
+[node name="FireSurprise17" parent="Fires" unique_id=900000018 instance=ExtResource("4_fire")]
+position = Vector2(1232, 944)
+hidden_until_near = true
+
+[node name="FireSurprise18" parent="Fires" unique_id=900000019 instance=ExtResource("4_fire")]
+position = Vector2(1072, 976)
+hidden_until_near = true
+
+[node name="FireSurprise19" parent="Fires" unique_id=900000020 instance=ExtResource("4_fire")]
+position = Vector2(16, 1008)
+hidden_until_near = true
+
+[node name="FireSurprise20" parent="Fires" unique_id=900000021 instance=ExtResource("4_fire")]
+position = Vector2(880, 1008)
+hidden_until_near = true
+
+[node name="FireSurprise21" parent="Fires" unique_id=900000022 instance=ExtResource("4_fire")]
+position = Vector2(368, 1040)
+hidden_until_near = true
+
+[node name="FireSurprise22" parent="Fires" unique_id=900000023 instance=ExtResource("4_fire")]
+position = Vector2(1296, 1040)
+hidden_until_near = true
+
+[node name="FireSurprise23" parent="Fires" unique_id=900000024 instance=ExtResource("4_fire")]
+position = Vector2(144, 1072)
+hidden_until_near = true
+
+[node name="FireSurprise24" parent="Fires" unique_id=900000025 instance=ExtResource("4_fire")]
+position = Vector2(272, 1072)
+hidden_until_near = true
+
+[node name="FireSurprise25" parent="Fires" unique_id=900000026 instance=ExtResource("4_fire")]
+position = Vector2(656, 1072)
+hidden_until_near = true
+
+[node name="FireSurprise26" parent="Fires" unique_id=900000027 instance=ExtResource("4_fire")]
+position = Vector2(976, 1072)
+hidden_until_near = true
+
+[node name="Stones" type="Node2D" parent="." unique_id=900000028]
+
+[node name="Stone1" parent="Stones" unique_id=900000029 instance=ExtResource("5_stone")]
+position = Vector2(418, 1051.33)
+
+[node name="Stone2" parent="Stones" unique_id=900000030 instance=ExtResource("5_stone")]
+position = Vector2(510, 988.67)
+
+[node name="Stone3" parent="Stones" unique_id=900000031 instance=ExtResource("5_stone")]
+position = Vector2(831.33, 958)
+
+[node name="Stone4" parent="Stones" unique_id=900000032 instance=ExtResource("5_stone")]
+position = Vector2(772.67, 1062)
+
+[node name="DialogueTriggers" type="Node2D" parent="." unique_id=900000033]
+
+[node name="dialogo0" type="Area2D" parent="DialogueTriggers" unique_id=900000034]
+position = Vector2(496, 1009)
+script = ExtResource("7_trigger")
+text = "“Niccolò! Use a cabeça!\nFaça o guarda olhar para outro lado!”"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTriggers/dialogo0" unique_id=900000035]
+shape = SubResource("Shape_dialogo0")
+
+[node name="dialogo2" type="Area2D" parent="DialogueTriggers" unique_id=900000038]
+position = Vector2(1265, 942.67)
+script = ExtResource("7_trigger")
+ends_level = true
+text = "“Rápido, para dentro da igreja!\nÉ o lugar mais seguro!”"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueTriggers/dialogo2" unique_id=900000039]
+shape = SubResource("Shape_dialogo2")
+
+[node name="Npcs" type="Node2D" parent="." unique_id=900000040]
+
+[node name="Npc1" parent="Npcs" unique_id=900000041 instance=ExtResource("6_npc")]
+position = Vector2(300, 950)
+
+[node name="Npc2" parent="Npcs" unique_id=900000042 instance=ExtResource("6_npc")]
+position = Vector2(350, 900)
+
+[node name="Npc3" parent="Npcs" unique_id=900000043 instance=ExtResource("6_npc")]
+position = Vector2(400, 980)
+
+[node name="Guard1" parent="." unique_id=772008957 instance=ExtResource("3_nsrm0")]
+position = Vector2(637.33, 1022.67)
+
+[node name="Guard2" parent="." unique_id=900000044 instance=ExtResource("3_nsrm0")]
+position = Vector2(960.67, 1053.33)
+
+[node name="Player" parent="." unique_id=1035644401 instance=ExtResource("2_nsrm0")]
+position = Vector2(32, 1024)

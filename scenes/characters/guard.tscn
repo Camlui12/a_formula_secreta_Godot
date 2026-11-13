@@ -3,6 +3,14 @@
 [ext_resource type="Script" uid="uid://cjdo10en816so" path="res://scenes/characters/guard.gd" id="1_vnjgc"]
 [ext_resource type="Texture2D" uid="uid://btmmxuxj1bhfq" path="res://assets/sprites/guard.png" id="2_vnjgc"]
 [ext_resource type="Texture2D" uid="uid://cs3kc4sfswqv7" path="res://assets/sprites/guard_vision.png" id="3_7d305"]
+[ext_resource type="Script" uid="uid://b65dlwqoleykg" path="res://scripts/State Machine/state_machine.gd" id="4_87b4h"]
+[ext_resource type="Script" uid="uid://bsgxyktn0jxyb" path="res://scenes/characters/States/patrol.gd" id="5_y122a"]
+[ext_resource type="Script" uid="uid://clvsbafps3xqf" path="res://scenes/characters/States/wait.gd" id="6_tawn2"]
+[ext_resource type="Script" uid="uid://bikovmbmmjv2" path="res://scenes/characters/States/capture.gd" id="7_aissc"]
+[ext_resource type="Script" path="res://scenes/characters/States/investigate.gd" id="8_invest"]
+[ext_resource type="Script" path="res://scenes/characters/States/return_state.gd" id="9_return"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nsrm0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7d305"]
 atlas = ExtResource("2_vnjgc")
@@ -165,20 +173,40 @@ size = Vector2(22.6875, 17.75)
 [node name="Guard" type="CharacterBody2D" unique_id=1035644401]
 script = ExtResource("1_vnjgc")
 
+[node name="VisionPivot" type="Node2D" parent="." unique_id=1491079047]
+
+[node name="GuardVisionSprite" type="Sprite2D" parent="VisionPivot" unique_id=388269252]
+modulate = Color(1, 1, 1, 0.3372549)
+self_modulate = Color(1, 1, 1, 0.7058824)
+material = SubResource("CanvasItemMaterial_nsrm0")
+position = Vector2(53.000004, 1)
+rotation = 4.712389
+scale = Vector2(1.0558391, 1.2155646)
+texture = ExtResource("3_7d305")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1319964094]
 sprite_frames = SubResource("SpriteFrames_onrkg")
-animation = &"walk_up"
+animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467831820]
 position = Vector2(0.65625, 7)
 shape = SubResource("RectangleShape2D_f6jof")
 
-[node name="GuardVisionSprite" type="Sprite2D" parent="." unique_id=388269252]
-texture = ExtResource("3_7d305")
+[node name="StateMachine" type="Node" parent="." unique_id=1419687486 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("4_87b4h")
+initial_state = NodePath("Patrol")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=375853159]
+[node name="Patrol" type="Node" parent="StateMachine" unique_id=1582741687]
+script = ExtResource("5_y122a")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1693720358]
-polygon = PackedVector2Array(0, -21, -19, 16, -11, 20, 0, 22, 11, 20, 19, 16, 0, -21, 0, -21)
+[node name="Wait" type="Node" parent="StateMachine" unique_id=1484917453]
+script = ExtResource("6_tawn2")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[node name="Capture" type="Node" parent="StateMachine" unique_id=1030990651]
+script = ExtResource("7_aissc")
+
+[node name="Investigate" type="Node" parent="StateMachine" unique_id=1582741690]
+script = ExtResource("8_invest")
+
+[node name="Return" type="Node" parent="StateMachine" unique_id=1582741691]
+script = ExtResource("9_return")

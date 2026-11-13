@@ -1,23 +1,22 @@
 class_name State
 extends Node
 
-@warning_ignore("unused_signal")
-signal transicionado(estado: State,novo_estado: StringName)
+signal transitioned(state: State, new_state_name: StringName)
 
-var entidade: CharacterBody2D
+var entity: CharacterBody2D
 var sprite_anim: AnimatedSprite2D
 
-func entrar() -> void:
+func enter() -> void:
 	pass
 
-func sair() -> void:
+func exit() -> void:
 	pass
 
-func lidar_input(_event: InputEvent) -> void:
+func handle_input(_event: InputEvent) -> void:
 	pass
 
-func atualizar(_delta: float) -> void:
+func update(_delta: float) -> void:
 	pass
 
-func atualizar_fisica(_delta: float) -> void:
+func physics_update(_delta: float) -> void:
 	pass

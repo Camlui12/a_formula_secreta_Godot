@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dw8hyhlyslft0"]
 
-[ext_resource type="Script" uid="uid://cdv25bo5glp84" path="res://scenes/characters/player.gd" id="1_it4js"]
+[ext_resource type="Script" uid="uid://y04ywapufbk4" path="res://scenes/characters/player.gd" id="1_it4js"]
 [ext_resource type="Texture2D" uid="uid://bucf5u5h07v0y" path="res://assets/sprites/young_niccolo.png" id="2_wewdl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w1kjt"]
@@ -159,7 +159,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6jof"]
-size = Vector2(21.375, 17.75)
+size = Vector2(16.450684, 17.21875)
 
 [node name="Player" type="CharacterBody2D" unique_id=1035644401]
 script = ExtResource("1_it4js")
@@ -169,7 +169,7 @@ sprite_frames = SubResource("SpriteFrames_onrkg")
 animation = &"idle_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=467831820]
-position = Vector2(0, 7)
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_f6jof")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1375361595]

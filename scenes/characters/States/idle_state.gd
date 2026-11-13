@@ -1,11 +1,15 @@
 class_name IdleState
 extends State
 
-func entrar() -> void:
-	entidade.velocity = Vector2.ZERO
-	sprite_anim.play("idle_" + (entidade as Player).obter_direcao_cardinal())
-	
-func atualizar_fisica(_delta: float) -> void:
-	var dir := (entidade as Player).capturar_direcao_entrada()
-	if dir != Vector2.ZERO:
-		transicionado.emit(self, &"walk")
+@onready var player: Player = owner
+
+
+func enter() -> void:
+	player.velocity = Vector2.ZERO
+	player.global_position = player.global_position.round()
+	Facing.play(sprite_anim, &"idle", player.facing_name)
+
+
+func physics_update(_delta: float) -> void:
+	if player.get_movement_input() != Vector2.ZERO:
+		transitioned.emit(self, &"walk")

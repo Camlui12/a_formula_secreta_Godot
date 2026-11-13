@@ -1,15 +1,19 @@
-class_name  WalkState
+class_name WalkState
 extends State
 
-func atualizar_fisica(_delta: float) -> void:
-	var player := entidade as Player
-	var dir := player.capturar_direcao_entrada()
-	
+@onready var player: Player = owner
+
+
+func enter() -> void:
+	Facing.play(sprite_anim, &"walk", player.facing_name)
+
+
+func physics_update(_delta: float) -> void:
+	var dir := player.get_movement_input()
 	if dir == Vector2.ZERO:
-		transicionado.emit(self, &"idle")
+		transitioned.emit(self, &"idle")
 		return
-	
-	player.velocity = dir.normalized() * player.speed
+
+	player.velocity = dir * player.get_current_speed()
 	player.move_and_slide()
-	
-	sprite_anim.play("walk_" + player.obter_direcao_cardinal())
+	Facing.play(sprite_anim, &"walk", player.facing_name)
